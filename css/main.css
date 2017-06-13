@@ -1,0 +1,17 @@
+.wrapper {
+  height: 95vh;
+}
+
+
+#content img {
+  border-radius: 50%;
+  width: 30px;
+}
+
+.offline {
+  background-color: #d9534f;
+}
+
+.online {
+  background-color: #5cb85c;
+}
