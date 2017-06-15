@@ -31,24 +31,20 @@ $.ajax({
         var logo = path.logo;
         }
 
+        var $html = '<a href="' + link + '" target="_blank">'// Creating the <a> link to nest the html inside it
+
       if (path.status === null) {      // Status check loop + Class added based on OFF/ON status
         var status = '';
-        var $html = '<li class="list-group-item justify-content-between offline">';
+        $html += '<li class="list-group-item justify-content-between offline">';
         } else {
         var status = path.status;
-        var $html = '<li class="list-group-item justify-content-between online">';
+        $html += '<li class="list-group-item justify-content-between online">';
         }
-
-
-
-
-      console.log(data.follows[i].channel);
-
 
       $html += '<span class="text-capitalize">' + username + '</span>';
       $html += status;
       $html += '<img src=' + logo + ' alt="" >'
-      $html += '</li>';
+      $html += '</li></a>';
       $('#content').append($html);
 
     }
